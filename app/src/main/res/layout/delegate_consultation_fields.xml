@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/field_title"
@@ -11,8 +10,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:padding="1dp"
+        android:layout_marginBottom="2dp"
         android:textColor="#F0F4F5"
         android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/checkbox_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/edit_text_layout"
@@ -20,40 +27,17 @@
         android:layout_height="wrap_content"
         android:visibility="gone">
 
-    <EditText
-        android:id="@+id/field_answer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@mipmap/rectangle_bg"
-        android:drawablePadding="9dp"
-        android:focusable="true"
-        android:inputType="textCapSentences"
-        android:enabled="true"
-        android:padding="15dp"
-        android:singleLine="true"
-        android:textSize="14sp" />
-        </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/checkbox_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
+        <EditText
+            android:id="@+id/field_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:background="@mipmap/rectangle_bg"
+            android:drawablePadding="9dp"
+            android:inputType="textCapSentences"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textSize="14sp" />
     </LinearLayout>
 
-
-    <Button
-        android:id="@+id/submit_answers"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:layout_margin="2dp"
-        android:focusable="true"
-        android:gravity="center_horizontal|center_vertical"
-        android:background="#05262F"
-        android:text="Submit"
-        android:textColor="@android:color/white"
-        android:layout_marginBottom="2dp"/>
 </LinearLayout>

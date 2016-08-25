@@ -4,100 +4,81 @@
     android:layout_height="match_parent"
     android:background="#13434D">
 
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/main_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="Personal/Health Information"
+            android:textColor="#F0F4F5"
+            android:textSize="20sp" />
 
         <LinearLayout
-            android:id="@+id/main_layout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            android:orientation="vertical"
-            android:descendantFocusability="beforeDescendants"
-            android:focusableInTouchMode="true">
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="center_horizontal"
-                android:text="Personal/Health Information"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:text="Age"
                 android:textColor="#F0F4F5"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
 
-            <LinearLayout
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:maxLength="3"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:textColor="@android:color/black"
+                android:background="@mipmap/age_rectange"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:text="Gender"
+                android:textColor="#F0F4F5"
+                android:textSize="16sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:padding="10dp"
-                    android:text="Age"
-                    android:textColor="#F0F4F5"
-                    android:textSize="16sp" />
+            <Spinner
+                android:id="@+id/gender"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/bg_gender"
+                android:entries="@array/gender_array"
+                android:textSize="14sp" />
 
-                <EditText
-                    android:id="@+id/age"
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:maxLength="3"
-                    android:layout_marginTop="10dp"
-                    android:paddingLeft="10dp"
-                    android:textColor="@android:color/black"
-                    android:background="@mipmap/age_rectange"
-                    android:inputType="number"
-                    android:singleLine="true"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:padding="10dp"
-                    android:text="Gender"
-                    android:textColor="#F0F4F5"
-                    android:textSize="16sp" />
-
-                <Spinner
-                    android:id="@+id/gender"
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@mipmap/bg_gender"
-                    android:entries="@array/gender_array"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
         </LinearLayout>
+    </LinearLayout>
 
-        <ListView
-            android:id="@+id/fields_list_view"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:descendantFocusability="beforeDescendants"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/main_layout" />
+    <ListView
+        android:id="@+id/fields_list_view"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/main_layout" />
 
-    </RelativeLayout>
-
-    <!--<Button-->
-        <!--android:id="@+id/submit_answers"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:focusable="true"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentStart="true"-->
-        <!--android:background="#05262F"-->
-        <!--android:text="Submit"-->
-        <!--android:textColor="@android:color/white"-->
-        <!--android:layout_marginBottom="2dp"/>-->
 </RelativeLayout>

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HairRestorationCenter.iml" filepath="$PROJECT_DIR$/HairRestorationCenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hair-restoration.iml" filepath="$PROJECT_DIR$/hair-restoration.iml" />
     </modules>
   </component>
 </project>
